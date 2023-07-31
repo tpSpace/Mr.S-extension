@@ -4,6 +4,7 @@ const quotes = [
     easy to do, your heart will be flattered and arrogant.`,
     'If you think you are the best programmer then there will be an indigo programmer who is better than you',
     'Code thủ tục ít thôi ông',
+    'Tôi đang code tensor còn ông thì sao?',
 ];
 
 export function quote() {
