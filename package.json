@@ -2,10 +2,22 @@
   "name": "mr-s",
   "displayName": "Mr.S",
   "description": "An extension that gives you motivation to boost your productivity.",
+  "keywords" : ["motivation", "productivity", "extension", "Synh", "mr.s", "mr-s", "mr s", "mr.s.","mrs"],
   "version": "0.0.1",
+  "author": {
+    "name": "nmvkhoi",
+    "email": "thenextneo@protonmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tpSpace/Mr.S-extension.git"
+  },
+  "icon": "./asset/logo.jpeg",
+  "license": "GNU GPLv3",
   "engines": {
     "vscode": "^1.80.0"
   },
+  "publisher": "nmvkhoi",
   "categories": [
     "Other"
   ],
