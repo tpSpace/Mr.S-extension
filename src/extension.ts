@@ -13,7 +13,9 @@ export function activate(context: vscode.ExtensionContext) {
 	
 	// the extension will keep track the cursor position. If the position of the cursor doesn't change in 5 minutes, the extension will show a message
 	let lastPosition: Position | undefined = undefined;
-	let timeoutTime = 5 * 60 * 1000; // 5 minutes
+	let timeoutTime: number = .1 * 60 * 1000; // 5 minutes
+	let button: vscode.MessageItem = { title: "OK" };
+
 
 	// get the position of the cursor
 	function getPosition(): Position | undefined {
@@ -30,8 +32,14 @@ export function activate(context: vscode.ExtensionContext) {
 	setInterval(() => {
 		const position = getPosition();
 		if (position) {
-			if (lastPosition && lastPosition.line === position.line && lastPosition.character === position.character) {
-				vscode.window.showInformationMessage(quote());
+			if ( lastPosition && lastPosition.line === position.line && lastPosition.character === position.character) {
+			
+				vscode.window.showInformationMessage(quote(), button).then(() => {
+					// do nothing
+					console.log("OK");
+					lastPosition = undefined;
+					
+				});
 			}
 			lastPosition = position;
 		} 
